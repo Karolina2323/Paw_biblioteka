@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 
@@ -18,9 +21,7 @@
             <a href="#about">O bibliotece</a>
             <a href="#books">Książki</a>
             <a href="#rules">Jak wypożyczyć?</a>
-                <a href="./add_book.html">
-        Dodaj książkę
-    </a>
+            <a href="add_book.html">Dodaj książkę</a>
         </nav>
     </header>
 
@@ -42,7 +43,7 @@
             </p>
 
             <img
-                src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-vector-book-icon-png-image_4868895.jpg"
+                src="https://img.redro.pl/obrazy/ikona-ksiazki-logo-700-115049572.jpg"
                 alt="Ikona książki"
                 width="120"
             >
@@ -50,7 +51,7 @@
 
         <section id="books">
             <h2>Polecane książki</h2>
-
+            <div class="table-container">
             <table>
                 <thead>
                     <tr>
@@ -75,129 +76,130 @@
                         <td>J.R.R. Tolkien</td>
                         <td>1937</td>
                     </tr>
-                                <tr>
-                <td>Mały Książę</td>
-                <td>Antoine de Saint-Exupéry</td>
-                <td>1943</td>
-            </tr>
+                    <tr>
+                        <td>Mały Książę</td>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>1943</td>
+                    </tr>
                 </tbody>
             </table>
+            </div>
+            <section id="search">
+                <h2>Wyszukaj książkę</h2>
 
-                    <section id="search">
-            <h2>Wyszukaj książkę</h2>
+                <form class="search-form" method="get">
+                    <div>
+                        <label for="query">
+                            Tytuł lub autor:
+                        </label>
 
-        <form method="get">
+                        <input
+                            type="text"
+                            id="query"
+                            name="query"
+                            placeholder="np. Solaris"
+                        >
+                    </div>
 
-        <div>
-            <label for="query">
-                Tytuł lub autor:
-            </label>
+                    <div>
+                        <label for="search-category">
+                            Kategoria:
+                        </label>
 
-            <input
-                type="text"
-                id="query"
-                name="query"
-                placeholder="np. Solaris"
-            >
-        </div>
+                        <select
+                            id="search-category"
+                            name="category"
+                        >
+                            <option value="">
+                                Wszystkie
+                            </option>
 
-        <div>
-            <label for="search-category">
-                Kategoria:
-            </label>
+                            <option value="fantasy">
+                                Fantasy
+                            </option>
 
-            <select
-                id="search-category"
-                name="category"
-            >
-                <option value="">
-                    Wszystkie
-                </option>
+                            <option value="science-fiction">
+                                Science fiction
+                            </option>
 
-                <option value="fantasy">
-                    Fantasy
-                </option>
+                            <option value="crime">
+                                Kryminał
+                            </option>
+                        </select>
+                    </div>
 
-                <option value="science-fiction">
-                    Science fiction
-                </option>
+                    <button type="submit">
+                        Szukaj
+                    </button>
 
-                <option value="crime">
-                    Kryminał
-                </option>
-            </select>
-        </div>
+                </form>
+            </section>
 
-        <button type="submit">
-            Szukaj
-        </button>
+            <div class="book-list">
+                <article class="book-card">
+                    <h3>Solaris</h3>
 
-    </form>
-    </section>
-            <article>
-                <h3>Solaris</h3>
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong> Stanisław Lem
+                        </p>
 
-                <div class="book-info">
+                        <p>
+                            <strong>Rok wydania:</strong> 1961
+                        </p>
+                    </div>
+
                     <p>
-                        <strong>Autor:</strong> Stanisław Lem
+                        Powieść science fiction opowiadająca o próbie
+                        kontaktu człowieka z obcą formą inteligencji.
+                    </p>
+                </article>
+
+                <article class="book-card">
+                    <h3>Lalka</h3>
+
+                    <p>
+                        <strong>Autor:</strong> Bolesław Prus
                     </p>
 
                     <p>
-                        <strong>Rok wydania:</strong> 1961
+                        Powieść przedstawiająca historię Stanisława
+                        Wokulskiego oraz społeczeństwo XIX-wiecznej Warszawy.
                     </p>
-                </div>
+                </article>
 
-                <p>
-                    Powieść science fiction opowiadająca o próbie
-                    kontaktu człowieka z obcą formą inteligencji.
-                </p>
-            </article>
+                <article class="book-card">
+                    <h3>Hobbit</h3>
 
-            <article>
-                <h3>Lalka</h3>
+                    <p>
+                        <strong>Autor:</strong> J.R.R. Tolkien
+                    </p>
 
-                <p>
-                    <strong>Autor:</strong> Bolesław Prus
-                </p>
+                    <p>
+                        Historia wyprawy Bilba Bagginsa, który opuszcza
+                        spokojny dom i wyrusza w niebezpieczną podróż.
+                    </p>
+                </article>
 
-                <p>
-                    Powieść przedstawiająca historię Stanisława
-                    Wokulskiego oraz społeczeństwo XIX-wiecznej Warszawy.
-                </p>
-            </article>
+                <article class="book-card">
+                    <h3>Mały Książę</h3>
 
-            <article>
-                <h3>Hobbit</h3>
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong> Antoine de Saint-Exupéry
+                        </p>
 
-                <p>
-                    <strong>Autor:</strong> J.R.R. Tolkien
-                </p>
+                        <p>
+                            <strong>Rok wydania:</strong> 1943
+                        </p>
+                    </div>
 
-                <p>
-                    Historia wyprawy Bilba Bagginsa, który opuszcza
-                    spokojny dom i wyrusza w niebezpieczną podróż.
-                </p>
-            </article>
-
-                <article>
-        <h3>Mały Książę</h3>
-
-        <div class="book-info">
-            <p>
-                <strong>Autor:</strong> Antoine de Saint-Exupéry
-            </p>
-
-            <p>
-                <strong>Rok wydania:</strong> 1943
-            </p>
-        </div>
-
-        <p>
-            Opowieść o podróży Małego Księcia i jego spotkaniach
-            z mieszkańcami różnych planet.
-        </p>
-    </article>
-
+                    <p>
+                        Opowieść o podróży Małego Księcia i jego spotkaniach
+                        z mieszkańcami różnych planet.
+                    </p>
+                </article>
+            </div>
         </section>
 
         <section id="rules">
@@ -231,6 +233,7 @@
             Projekt ćwiczeniowy — Projektowanie aplikacji webowych
         </p>
     </footer>
+        
 
 </body>
 </html>
